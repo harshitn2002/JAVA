@@ -18,9 +18,9 @@ class Student
 	} 
 	public static void main(String args[])
 	{
-		String a="Ambuj Bhandari";
+		String a="Harshit Narang";
 		String b="Computer Science";
-		long x=20011932;
+		long x=20011150;
 
 		Student s= new Student();
 		s.setDetails(a, b, x);
