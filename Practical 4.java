@@ -1,47 +1,42 @@
 import java.util.*;
-class Employee
-{
-    long id;
-	String Name,department;
-	double salary;
-	Employee()
-	{
-		id=0;
-		Name="";
-		department="";
-		salary=0.0d;
-	} 
-	void setDetails(String a,String b,long c,double d)
-	{
-		id=c;
-		Name=a;
-		department=b;
-		salary=d;
-	} 
-	void showDetails()
-	{
-		System.out.println("Name of Employee: "+Name);
-		System.out.println("ID of Employee: "+id);
-		System.out.println("Department of Employee: "+department);
-		System.out.println("Salary of Employee: "+salary);
-	} 
-	public static void main(String args[])
-	{
-		Scanner in= new Scanner(System.in);
-		Employee e=new Employee();
 
-		System.out.println("Enter the Name of Employee");
-		String a= in.nextLine();
-		System.out.println("Enter the Employee ID");
-		long c=in.nextLong();
-
-		System.out.println("Enter the Department of Employee");
-		String b=in.nextLine();
-		in.nextLine();
-		System.out.println("Enter the salary of Employee");
-		double d=in.nextDouble();
-
-		e.setDetails(a,b,c,d);
-		e.showDetails();
-	}
+class Employ{
+    int ID;
+    String name;
+    String Department;
+    int salary;
+    Employ(){
+        ID = 0;
+        name = null;
+        Department = null;
+        salary = 0;
+        System.out.println("A new Employ has been created");
+    }
+    void setDetails(int ID , String name , String Department , int salary){
+        this.ID = ID;
+        this.name = name;
+        this.Department = Department;
+        this.salary = salary;
+    } 
+    void showDetails()
+    {
+        System.out.println("Employ Id is: "+ ID);
+        System.out.println("Employ name is: "+ name);
+        System.out.println("Employ Department is: "+ Department);
+        System.out.println("Employ salary is: "+ salary);
+    }
+        public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name of Employ : ");
+        String name = sc.next();
+        System.out.println("Enter the Id : ");
+        int ID = sc.nextInt();
+        System.out.println("Enter the Department: ");
+        String Department = sc.next();
+        System.out.println("Enter the salary : ");
+        int salary = sc.nextInt();
+        Employ e = new Employ();
+        e.setDetails(ID,name,Department,salary);
+        e.showDetails();
+    }
 }
